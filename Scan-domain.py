@@ -21,7 +21,8 @@ if dominio.Dominio:
 			#Definiendo url
 			url = 'http://{}.{}'.format(sub_dom,dominio.Dominio)			
 			try:
-				url_r = requests.get(url)			
+				#Comprobando conexión a url
+				requests.get(url)			
 				print("Respuesta desde: {}".format(url))
 				salida = open("Subdominios_{}.txt".format(dominio.Dominio),'a')
 				salida.write(url+'\n')
